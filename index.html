@@ -5,72 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #display {
-            width: 200px;
-            height: 50px;
-            border: 1px solid black;
-            box-sizing: border-box;
-            border-radius: 3px;
-            margin: 10px 0;
-        }
-
-        .btnGroup {
-            width: 200px;
-            height: 200px;
-            display: grid;
-            grid-template-columns: repeat(4, auto);
-            gap: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
-    <form id="form">
-        <!-- <div class="btnGroup">
-            <button id="btn1" value="1" onclick="onclickBtn1()">1</button>
-            <button id="btn2" value="2" onclick="onclickBtn2()">2</button>
-            <button id="btn3" value="3" onclick="onclickBtn3()">3</button>
-            <button id="btnKop" value="*" onclick="onclickBtnKop()">*</button>
-            <button id="btn4" value="4" onclick="onclickBtn4()">4</button>
-            <button id="btn5" value="5" onclick="onclickBtn5()">5</button>
-            <button id="btn6" value="6" onclick="onclickBtn6()">6</button>
-            <button id="btnBol" value="/" onclick="onclickBtnBol()">/</button>
-            <button id="btn7" value="7" onclick="onclickBtn7()">7</button>
-            <button id="btn8" value="8" onclick="onclickBtn8()">8</button>
-            <button id="btn9" value="9" onclick="onclickBtn9()">9</button>
-            <button id="btnMinus" value="-" onclick="onclickBtnMinus()">-</button>
-            <button id="btn0" value="0" onclick="onclickBtn0()">0</button>
-            <button id="btnFloat" value="," onclick="onclickBtnFloat()">.</button>
-            <button id="btnPlus" value="+" onclick="onclickBtnPlus()">+</button>
-            <button id="btnEquals" value="=" onclick="onclickBtnEquals()">=</button>
-        </div> -->
-        <div id="display"></div>
-
-        <div class="btnGroup">
-            <button onclick="clearClick()">Clear</button>
-            <button onclick="handleClick('(')">&#8317;</button>
-            <button onclick="handleClick(')')">&#8318;</button>
-            <button onclick="backspace()"> &#8592;</button>
-            <button onclick="handleClick(1)">1</button>
-            <button onclick="handleClick(2)">2</button>
-            <button onclick="handleClick(3)">3</button>
-            <button onclick="handleClick('*')">*</button>
-            <button onclick="handleClick(4)">4</button>
-            <button onclick="handleClick(5)">5</button>
-            <button onclick="handleClick(6)">6</button>
-            <button onclick="handleClick('/')">/</button>
-            <button onclick="handleClick(7)">7</button>
-            <button onclick="handleClick(8)">8</button>
-            <button onclick="handleClick(9)">9</button>
-            <button onclick="handleClick('-')">-</button>
-            <button onclick="handleClick(0)">0</button>
-            <button onclick="handleClick('.')">,</button>
-            <button onclick="handleClick('+')">+</button>
-            <button onclick="equalsClick()">=</button>
+    <div class="content">
+        <h2>Basic <span style="color: rgb(255, 126, 40);">Calculator</span></h2>
+        <div id="form" class="form">
+            <div id="display" class="display"></div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><button onclick="clearClick()">AC</button></td>
+                        <td><button onclick="handleClick('(')">%</button></td>
+                        <td><button onclick="backspace()"> &#8592;</button></td>
+                        <td><button class="symbol" onclick="handleClick('/')">&divide;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="handleClick(7)">7</button></td>
+                        <td><button onclick="handleClick(8)">8</button></td>
+                        <td><button onclick="handleClick(9)">9</button></td>
+                        <td><button class="symbol" onclick="handleClick('*')">*</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="handleClick(4)">4</button></td>
+                        <td><button onclick="handleClick(5)">5</button></td>
+                        <td><button onclick="handleClick(6)">6</button></td>
+                        <td><button class="symbol" onclick="handleClick('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="handleClick(1)">1</button></td>
+                        <td><button onclick="handleClick(2)">2</button></td>
+                        <td><button onclick="handleClick(3)">3</button></td>
+                        <td><button class="symbol" onclick="handleClick('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button style="width: 110px;" onclick="handleClick(0)">0</button> </td>
+                        <td><button onclick="handleClick('.')">,</button></td>
+                        <td><button class="symbol" onclick="equalsClick()">=</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </form>
-
+    </div>
+    <!-- Javascript -->
     <script src="./script/index.js"></script>
 </body>
 
