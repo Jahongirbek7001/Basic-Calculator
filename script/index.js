@@ -23,3 +23,7 @@ function backspace() {
         display.innerHTML = text;
     }
 }
+function percent() {
+    let n = Number(display === null || display === void 0 ? void 0 : display.textContent);
+    display.innerHTML = n / 100;
+}

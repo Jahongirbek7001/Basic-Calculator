@@ -25,3 +25,8 @@ function backspace() {
         display.innerHTML = text;
     }
 }
+
+function percent() {
+    let n: number = Number(display?.textContent);
+    display.innerHTML = n / 100;
+}
